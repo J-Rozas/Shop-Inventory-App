@@ -1,5 +1,17 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
-
+    {% for publisher in publishers %}
+        <div class="all_publishers">
+            <p>
+                {{ publisher.name }}
+            </p>
+            <p>
+                {{ publisher.country }}
+            </p>
+            <p>
+                {{ publisher.address }}
+            </p>
+        </div>
+    {% endfor %}
 {% endblock %}
