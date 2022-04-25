@@ -10,7 +10,7 @@ app.register_blueprint(books_blueprint)
 
 @app.route("/")
 def main():
-    return "hi"
+    return render_template("index.html.jinja")
 
 if __name__ == "__main__":
     app.run()
