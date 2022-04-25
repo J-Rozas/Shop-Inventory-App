@@ -1,6 +1,9 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
+    <div>
+        <button><a href="/books/new">Add a new book</a></button>
+    </div>
     {% for book in books %}
     <div class="book">
         <h2>
@@ -14,6 +17,9 @@
         </p>
         <p>
             Genre: {{ book.genre }}
+        </p>
+        <p>
+            Number of pages: {{ book.number_of_pages }}
         </p>
         <p>
             Price: £ {{ book.selling_price}}
