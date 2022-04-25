@@ -1,6 +1,11 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
+    <div>
+        <button>
+            <a href="/publishers/new">Add new publisher</a>
+        </button>
+    </div>
     {% for publisher in publishers %}
         <div class="all_publishers">
             <p>
