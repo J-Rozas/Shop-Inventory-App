@@ -26,3 +26,9 @@ def add(publisher):
 
     publisher.id = id
 
+
+def delete(id):
+    sql = "DELETE FROM publishers WHERE id = %s"
+    values = [id]
+
+    run_sql(sql, values)
