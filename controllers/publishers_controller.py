@@ -14,6 +14,7 @@ def publishers():
 def new():
     return render_template("publishers/new.html.jinja")
 
+
 @publishers_blueprint.route("/publishers", methods=["POST"])
 def create():
     name = request.form["name"]
@@ -22,4 +23,10 @@ def create():
 
     publisher_repository.add(Publisher(name, country, address))
 
+    return redirect("/publishers")
+
+
+@publishers_blueprint.route("/publishers/<id>/delete", methods=["POST"])
+def delete(id):
+    publisher_repository.delete(id)
     return redirect("/publishers")
