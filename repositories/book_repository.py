@@ -29,10 +29,15 @@ def select_all():
 def add(new_book):
     sql = "INSERT INTO books (title, number_of_pages, genre, author, stock, selling_price, publisher_id) VALUES (%s, %s, %s, %s, %s, %s, %s) returning id"
 
-    values = [new_book.title, new_book.number_of_pages, new_book.genre, new_book.author, new_book.stock, new_book.selling_price, new_book.publisher["id"]]
+    values = [new_book.title, new_book.number_of_pages, new_book.genre, new_book.author, new_book.stock, new_book.selling_price, new_book.publisher.id]
 
     result = run_sql(sql, values)
 
     id = result[0]["id"]
 
     new_book.id = id
+
+
+def delete_all():
+    sql = "DELETE FROM books *"
+    run_sql(sql)
