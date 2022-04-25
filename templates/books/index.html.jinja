@@ -1,7 +1,27 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
-    <p>
-        Just testing out
-    </p>
+    {% for book in books %}
+    <div class="book">
+        <h2>
+            {{ book.title }}
+        </h2>
+        <p>
+            Publisher: {{ book.publisher.name }}
+        </p>
+        <p>
+            Author: {{ book.author }}
+        </p>
+        <p>
+            Genre: {{ book.genre }}
+        </p>
+        <p>
+            Price: £ {{ book.selling_price}}
+        </p>
+        <p>
+            Stock: {{ book.stock }}
+            <!-- Add an icon here to give info about the stock -->
+        </p>
+    </div>
+    {% endfor %}
 {% endblock %}
