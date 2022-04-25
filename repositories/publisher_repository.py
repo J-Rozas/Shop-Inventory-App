@@ -32,3 +32,19 @@ def delete(id):
     values = [id]
 
     run_sql(sql, values)
+
+
+def select(id):
+    sql = "SELECT * FROM publishers WHERE id = %s"
+    values = [id]
+
+    result = run_sql(sql, values)[0]
+
+    return result
+
+
+def update(publisher):
+    sql = "UPDATE publishers SET name = %s, country = %s, address = %s WHERE id = %s"
+    values = [publisher.name, publisher.country, publisher.address, publisher.id]
+
+    run_sql(sql, values)
