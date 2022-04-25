@@ -30,3 +30,22 @@ def create():
 def delete(id):
     publisher_repository.delete(id)
     return redirect("/publishers")
+
+
+@publishers_blueprint.route("/publishers/<id>/edit")
+def edit(id):
+    publisher = publisher_repository.select(id)
+    return render_template("publishers/edit.html.jinja", publisher = publisher)
+
+
+@publishers_blueprint.route("/publishers/<id>", methods=["POST"])
+def update(id):
+    name = request.form["name"]
+    country = request.form["country"]
+    address = request.form["address"]
+
+    publisher = Publisher(name, country, address, id)
+
+    publisher_repository.update(publisher)
+
+    return redirect("/publishers")
