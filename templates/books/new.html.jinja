@@ -1,0 +1,43 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+
+    <form action="/books" method="POST">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <label for="publisher">Publisher</label>
+            <select name="publisher" id="publisher">
+                {% for publisher in publishers %}
+                    <option value="{{ publisher.id }}">{{ publisher.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+        </div>
+        <div>
+            <label for="genre">Genre</label>
+            <input type="text" name="genre" id="genre">
+        </div>
+        <div>
+            <label for="number_of_pages">Number of pages</label>
+            <input type="text" name="number_of_pages" id="number_of_pages">
+        </div>
+        <div>
+            <label for="selling_price">Selling price</label>
+            <input type="text" name="selling_price" id="selling_price">
+        </div>
+        <div>
+            <label for="stock">Stock</label>
+            <input type="text" name="stock" id="stock">
+        </div>
+        <div>
+            <input type="submit" name="submit" id="submit" value="Add book">
+        </div>
+    </form>
+
+{% endblock %}
