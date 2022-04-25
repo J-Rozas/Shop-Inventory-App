@@ -14,3 +14,15 @@ def select_all():
         list_of_publishers.append(publisher)
 
     return list_of_publishers
+
+
+def add(publisher):
+    sql = "INSERT INTO publishers (name, country, address) VALUES (%s, %s, %s) RETURNING id"
+    values = [publisher.name, publisher.country, publisher.address]
+
+    result = run_sql(sql, values)
+
+    id = result[0]["id"]
+
+    publisher.id = id
+
