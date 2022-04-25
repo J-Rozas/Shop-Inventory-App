@@ -40,7 +40,9 @@ def select(id):
 
     result = run_sql(sql, values)[0]
 
-    return result
+    selected_publisher = Publisher(result["name"], result["country"], result["address"], result["id"])
+
+    return selected_publisher
 
 
 def update(publisher):
@@ -48,3 +50,8 @@ def update(publisher):
     values = [publisher.name, publisher.country, publisher.address, publisher.id]
 
     run_sql(sql, values)
+
+
+def delete_all():
+    sql = "DELETE FROM publishers *"
+    run_sql(sql)
