@@ -1,0 +1,27 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+
+<h2>
+    Edit a publisher
+</h2>
+
+<form action="/publishers/{{ publisher.id }}", method="POST">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="{{ publisher.name }}">
+    </div>
+    <div>
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" placeholder="{{ publisher.country }}">
+    </div>
+    <div>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" placeholder="{{ publisher.address }}">
+    </div>
+    <div>
+        <input type="submit" name="edit" id="edit" value="Confirm edit">
+    </div>
+</form>
+
+{% endblock %}
