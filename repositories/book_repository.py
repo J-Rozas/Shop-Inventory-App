@@ -41,3 +41,20 @@ def add(new_book):
 def delete_all():
     sql = "DELETE FROM books *"
     run_sql(sql)
+
+
+def select(id):
+    sql = "SELECT * FROM books WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    book = Book(result["title"], result["number_of_pages"], result["genre"], result["author"], result["stock"], result["publisher_id"], result["selling_price"], id)
+
+    return book
+
+
+def update(book):
+    sql = "UPDATE books SET stock = %s WHERE id = %s"
+    values = [book.stock, book.id]
+
+    run_sql(sql, values)
