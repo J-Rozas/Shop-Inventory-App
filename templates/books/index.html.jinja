@@ -22,11 +22,15 @@
             Number of pages: {{ book.number_of_pages }}
         </p>
         <p>
-            Price: £ {{ book.selling_price}}
+            Price: £{{ book.selling_price}}
         </p>
         <p>
             Stock: {{ book.stock }}
-            <!-- Add an icon here to give info about the stock -->
+            {% if book.stock == 0 %}
+                <i class="material-symbols-outlined" style="color: red; position: relative; top: 5px; bottom: 5px">dangerous</i>
+            {% elif book.stock < 5 %}
+                <i class="material-symbols-outlined" style="color: rgb(255, 183, 0); position: relative; top: 5px; bottom: 5px">warning</i>
+            {% endif %}
         </p>
     </div>
     {% endfor %}
