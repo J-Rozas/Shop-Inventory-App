@@ -8,7 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100%;
     display: grid;
-    background-color: gray;
+    background-color: rgb(173, 170, 170);
 }
 
 
@@ -19,7 +19,7 @@ header {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: rgb(3, 141, 216);
+    background-color: rgb(8, 157, 237);
     text-align: center;
     max-height: 15%;
     border-bottom: 2px solid black;
@@ -45,8 +45,6 @@ main {
     width: 90%;
     justify-self: center;
     background-color: white;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
 }
 
 .main_index {
@@ -95,7 +93,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(3, 141, 216);
+    background-color: rgb(8, 157, 237);
     text-align: center;
     max-height: 15%;
     border-top: 2px solid black;
