@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <title>Book Inventory App</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul id="main_navbar">
                 <li>
                     <a href="/">Home</a>
                 </li>
@@ -30,7 +31,7 @@
     </main>
     <footer>
         <nav>
-            <a href="https://github.com/J-Rozas" target="_blank"><img src="/static/img/github_logo.png" alt="GitHub logo that redirects to the developer's GitHub"></a>
+            <a href="https://github.com/J-Rozas" target="_blank"><img src="/static/img/github_logo.png" alt="GitHub logo that redirects to the developer's GitHub" id="github"></a>
         </nav>
     </footer>
 </body>
