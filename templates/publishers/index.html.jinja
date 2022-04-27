@@ -14,17 +14,19 @@
                     {{ publisher.name }}
                 </h2>
                 <p>
-                    {{ publisher.country }}
+                    Country: {{ publisher.country }}
                 </p>
                 <p>
-                    {{ publisher.address }}
+                    Address: {{ publisher.address }}
                 </p>
-                <form action="publishers/{{ publisher.id }}/delete" method="POST">
-                    <input type="submit" value="Delete">
-                </form>
-                <button>
-                    <a href="publishers/{{ publisher.id }}/edit">Edit</a>
-                </button>
+                <div class="action_buttons">
+                    <form action="publishers/{{ publisher.id }}/delete" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
+                    <button>
+                        <a href="publishers/{{ publisher.id }}/edit">Edit</a>
+                    </button>
+                </div>
             </div>
             {% endfor %}
         </div>

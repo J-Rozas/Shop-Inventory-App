@@ -38,9 +38,11 @@
                     <i class="material-symbols-outlined" style="color: rgb(14, 229, 90); position: relative; top: 5px; bottom: 5px">check_circle</i>
                     {% endif %}
                 </p>
-                <p>
-                    <button><a href="/books/{{ book.id }}/sell">Sell books</a></button>
-                </p>
+                <div class="action_buttons">
+                    <button>
+                        <a href="/books/{{ book.id }}/sell">Sell books</a>
+                    </button>
+                </div>
             </div>
             {% endfor %}
         </div>
