@@ -24,6 +24,7 @@ header {
     border-bottom: 2px solid black;
     font-size: large;
     font-weight: bold;
+    z-index: 1;
 }
 
 
