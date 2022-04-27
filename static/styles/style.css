@@ -100,6 +100,11 @@ article {
 }
 
 
+/* Styling for the main body when adding new element */
+.new_book, .new_publisher {
+    margin-top: 7%;
+}
+
 /* Styling for the footer */
 
 footer {
