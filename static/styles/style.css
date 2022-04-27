@@ -33,6 +33,10 @@ header {
     color: black;
 }
 
+#main_navbar {
+    padding-left: 0%;
+}
+
 #main_navbar > li {
     list-style-type: none;
 }
@@ -43,6 +47,18 @@ header {
 main {
     width: 80%;
     justify-self: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+article {
+    margin-top: 10%;
 }
 
 .main_index {
