@@ -16,5 +16,5 @@ CREATE TABLE books(
     author VARCHAR(100),
     stock INT,
     selling_price FLOAT,
-    publisher_id SERIAL REFERENCES publishers(id)
+    publisher_id SERIAL REFERENCES publishers(id) ON DELETE CASCADE
 );
