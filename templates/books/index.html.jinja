@@ -31,11 +31,11 @@
                 <p>
                     Stock: {{ book.stock }}
                     {% if book.stock == 0 %}
-                    <i class="material-symbols-outlined" style="color: red; position: relative; top: 5px; bottom: 5px">dangerous</i>
+                    <i class="material-symbols-outlined" id="danger">dangerous</i>
                     {% elif book.stock < 5 %}
-                    <i class="material-symbols-outlined" style="color: rgb(255, 183, 0); position: relative; top: 5px; bottom: 5px">warning</i>
+                    <i class="material-symbols-outlined" id="warning">warning</i>
                     {% else %}
-                    <i class="material-symbols-outlined" style="color: rgb(14, 229, 90); position: relative; top: 5px; bottom: 5px">check_circle</i>
+                    <i class="material-symbols-outlined" id="healthy">check_circle</i>
                     {% endif %}
                 </p>
                 <div class="action_buttons">

@@ -131,3 +131,25 @@ a {
     text-decoration: none;
     color: black;
 }
+
+
+/* Styling for the book stock icons */
+
+.material-symbols-outlined {
+    position: relative;
+    top: 5px;
+    bottom: 5px;
+}
+
+#danger {
+    color: red;
+    display: inline-block;
+}
+
+#warning {
+    color: rgb(255, 183, 0);
+}
+
+#healthy {
+    color: rgb(14, 229, 90);
+}
