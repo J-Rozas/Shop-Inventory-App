@@ -18,9 +18,15 @@ header {
     max-height: 15%;
 }
 
+
 #main_navbar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    color: black;
+}
+
+#main_navbar > li {
+    list-style-type: none;
 }
 
 main {
@@ -43,3 +49,7 @@ footer {
     width: auto;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
