@@ -1,7 +1,7 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
-
+<div class="new_book">
     <form action="/books" method="POST">
         <div>
             <label for="title">Title</label>
@@ -39,5 +39,6 @@
             <input type="submit" name="submit" id="submit" value="Add book">
         </div>
     </form>
+</div>
 
 {% endblock %}
