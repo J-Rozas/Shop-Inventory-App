@@ -1,28 +1,32 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
-    <div>
-        <button>
-            <a href="/publishers/new">Add new publisher</a>
-        </button>
-    </div>
-    {% for publisher in publishers %}
-        <div class="all_publishers">
-            <p>
-                {{ publisher.name }}
-            </p>
-            <p>
-                {{ publisher.country }}
-            </p>
-            <p>
-                {{ publisher.address }}
-            </p>
-            <form action="publishers/{{ publisher.id }}/delete" method="POST">
-                <input type="submit" value="Delete">
-            </form>
+    <div class="main_index">
+        <div class="add_element">
             <button>
-                <a href="publishers/{{ publisher.id }}/edit">Edit</a>
+                <a href="/publishers/new">Add new publisher</a>
             </button>
         </div>
-    {% endfor %}
+        <div class="all_elements">
+        {% for publisher in publishers %}
+            <div class="element">
+                <h2>
+                    {{ publisher.name }}
+                </h2>
+                <p>
+                    {{ publisher.country }}
+                </p>
+                <p>
+                    {{ publisher.address }}
+                </p>
+                <form action="publishers/{{ publisher.id }}/delete" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+                <button>
+                    <a href="publishers/{{ publisher.id }}/edit">Edit</a>
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

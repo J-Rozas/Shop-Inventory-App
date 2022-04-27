@@ -42,6 +42,17 @@ main {
     margin-bottom: 5%;
 }
 
+.main_index {
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.all_elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 /* Styling for the footer */
 

@@ -1,40 +1,46 @@
 {% extends "base.html.jinja" %}
 
 {% block content %}
-    <div>
-        <button><a href="/books/new">Add a new book</a></button>
+    <div class="main_index">
+        <div class="add_element">
+            <button>
+                <a href="/books/new">Add a new book</a>
+            </button>
+        </div>
+        <div class="all_elements">
+            {% for book in books %}
+            <div class="element">
+                <h2>
+                    {{ book.title }}
+                </h2>
+                <p>
+                    Publisher: {{ book.publisher.name }}
+                </p>
+                <p>
+                    Author: {{ book.author }}
+                </p>
+                <p>
+                    Genre: {{ book.genre }}
+                </p>
+                <p>
+                    Number of pages: {{ book.number_of_pages }}
+                </p>
+                <p>
+                    Price: £{{ book.selling_price}}
+                </p>
+                <p>
+                    Stock: {{ book.stock }}
+                    {% if book.stock == 0 %}
+                    <i class="material-symbols-outlined" style="color: red; position: relative; top: 5px; bottom: 5px">dangerous</i>
+                    {% elif book.stock < 5 %}
+                    <i class="material-symbols-outlined" style="color: rgb(255, 183, 0); position: relative; top: 5px; bottom: 5px">warning</i>
+                    {% endif %}
+                </p>
+                <p>
+                    <button><a href="/books/{{ book.id }}/sell">Sell books</a></button>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% for book in books %}
-    <div class="book">
-        <h2>
-            {{ book.title }}
-        </h2>
-        <p>
-            Publisher: {{ book.publisher.name }}
-        </p>
-        <p>
-            Author: {{ book.author }}
-        </p>
-        <p>
-            Genre: {{ book.genre }}
-        </p>
-        <p>
-            Number of pages: {{ book.number_of_pages }}
-        </p>
-        <p>
-            Price: £{{ book.selling_price}}
-        </p>
-        <p>
-            Stock: {{ book.stock }}
-            {% if book.stock == 0 %}
-                <i class="material-symbols-outlined" style="color: red; position: relative; top: 5px; bottom: 5px">dangerous</i>
-            {% elif book.stock < 5 %}
-                <i class="material-symbols-outlined" style="color: rgb(255, 183, 0); position: relative; top: 5px; bottom: 5px">warning</i>
-            {% endif %}
-        </p>
-        <p>
-            <button><a href="/books/{{ book.id }}/sell">Sell books</a></button>
-        </p>
-    </div>
-    {% endfor %}
 {% endblock %}
