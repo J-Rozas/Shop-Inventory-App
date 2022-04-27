@@ -8,6 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100%;
     display: grid;
+    background-color: gray;
 }
 
 
@@ -18,9 +19,12 @@ header {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: red;
+    background-color: rgb(3, 141, 216);
     text-align: center;
     max-height: 15%;
+    border-bottom: 2px solid black;
+    font-size: large;
+    font-weight: bold;
 }
 
 
@@ -38,19 +42,49 @@ header {
 /* Styling for the main body */
 
 main {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    width: 90%;
+    justify-self: center;
+    background-color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 .main_index {
-    background-color: aqua;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
 .all_elements {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.element {
+    background-color: rgba(224, 218, 218, 0.688);
+    width: 90%;
+    margin-bottom: 10%;
+}
+
+.element > h2, button {
+    text-align: center;
+}
+
+.element > p {
+    padding-left: 5%;
+}
+
+.add_element {
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+
+.action_buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 
 
@@ -61,12 +95,14 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: rgb(3, 141, 216);
     text-align: center;
     max-height: 15%;
+    border-top: 2px solid black;
 }
 
 #github {
+    margin-top: 5px;
     max-height: 50px;
     width: auto;
 }
