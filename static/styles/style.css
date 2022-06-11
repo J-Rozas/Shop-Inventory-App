@@ -154,3 +154,10 @@ a {
 #healthy {
     color: rgb(14, 229, 90);
 }
+
+
+/* Styling for delete button on publishers */
+
+.delete {
+    cursor: pointer;
+}
