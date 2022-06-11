@@ -5,7 +5,7 @@ from models.publisher import Publisher
 def select_all():
     list_of_publishers = []
 
-    sql = "SELECT * FROM publishers"
+    sql = "SELECT * FROM publishers ORDER BY name"
 
     all_publishers = run_sql(sql)
 

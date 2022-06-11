@@ -5,7 +5,7 @@ from repositories import publisher_repository
 def select_all():
     list_of_books = []
 
-    sql = "SELECT * FROM books"
+    sql = "SELECT * FROM books ORDER BY title"
     results = run_sql(sql)
 
     for book in results:
